@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { TransparentComponent } from './pages/transparent/transparent.component';
+import { InfoComponent } from './pages/info/info.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { TransparentComponent } from './pages/transparent/transparent.component'
     HeaderComponent,
     FooterComponent,
     TransparentComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

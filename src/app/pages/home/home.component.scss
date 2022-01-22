@@ -18,3 +18,24 @@ section{
     z-index: -1;
     }
 }
+.header-wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   .header-title{
+      font-family: 'DM Serif Display', serif;
+      font-weight: bold;
+      color: white;
+      font-size: 5rem;
+   }
+   .header-subtitle{
+      padding: 2%;
+      text-transform: capitalize;
+      font-family: 'DM Serif Display', serif;
+      color: white;
+      font-size: 1.2rem;
+   }
+}
+
+
