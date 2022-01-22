@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), data: { animation: 'HomePage' }
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule), data: { animation: 'AboutPage' }
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule), data: { animation: 'ContactPage' }
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), data: { animation: 'HomePage' }
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
