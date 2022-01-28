@@ -10,6 +10,7 @@ import {
   animations: [
     bounceInRightOnEnterAnimation({ anchor: 'enter1' }),
     bounceInRightOnEnterAnimation({ anchor: 'enter2', delay: 100 }),
+    bounceInRightOnEnterAnimation({ anchor: 'enter3', delay: 300 }),
   ]
 })
 export class AboutComponent implements OnInit {

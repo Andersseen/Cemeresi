@@ -15,8 +15,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule), data: { animation: 'ContactPage' }
   },
   {
+    path: 'services',
+    loadChildren: () => import('./pages/services/services.module').then(m => m.ServicesModule), data: { animation: 'ServicesPage' }
+  },
+  {
     path: '',
-    redirectTo: '',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
