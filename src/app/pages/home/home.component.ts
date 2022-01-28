@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { bounceInUpOnEnterAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    bounceInUpOnEnterAnimation({ anchor: 'enter1' }),
+  ]
 })
 export class HomeComponent implements OnInit {
 

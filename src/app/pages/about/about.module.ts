@@ -4,10 +4,15 @@ import { CommonModule } from '@angular/common';
 import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about.component';
 
+import { MaterialModule } from '../../../lib/ui/material.module';
+
+
 @NgModule({
   imports: [
     CommonModule,
-    AboutRoutingModule
+    AboutRoutingModule,
+    MaterialModule
+
   ],
   declarations: [AboutComponent]
 })
