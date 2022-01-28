@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
   bounceInRightOnEnterAnimation,
+  bounceInUpOnEnterAnimation
 } from 'angular-animations';
 
 @Component({
@@ -9,8 +10,8 @@ import {
   styleUrls: ['./about.component.scss'],
   animations: [
     bounceInRightOnEnterAnimation({ anchor: 'enter1' }),
-    bounceInRightOnEnterAnimation({ anchor: 'enter2', delay: 100 }),
-    bounceInRightOnEnterAnimation({ anchor: 'enter3', delay: 300 }),
+    bounceInUpOnEnterAnimation
+      ({ anchor: 'enter2', delay: 300 }),
   ]
 })
 export class AboutComponent implements OnInit {
