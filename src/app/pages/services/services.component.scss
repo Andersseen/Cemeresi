@@ -1,5 +1,24 @@
 section{
     margin-top: 60px;
-    height: 100vh;
+    min-height: 100vh;
     background: #ffffff;
+}
+
+.example-card {
+  max-width: 400px;
+}
+.content-flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+    padding: 2%;
+}
+
+
+mat-card{
+    color: white;
+    background-image: radial-gradient(violet 20%, rgb(132, 29, 153) 100%);
+  background-size: cover;
 }
