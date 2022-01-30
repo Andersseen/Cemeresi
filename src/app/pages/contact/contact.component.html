@@ -45,13 +45,62 @@
 
         </mat-card>
     </div>
-    <div [@enter2] class="main-content">
-        <div>
-            <iframe
+    <div class="main-content">
+        <div [@enter2] class="map-wrapper">
+            <iframe class="map-box"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12148.326398254298!2d-3.717833!3d40.429192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdb5daea3913d42e!2sCentro%20M%C3%A9dico%20Est%C3%A9tico%20Cemeresi!5e0!3m2!1ses!2ses!4v1643397126608!5m2!1ses!2ses"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                loading="lazy"></iframe>
         </div>
-        <div>
+        <div [@enter3] class="form-wrapper">
+            <h3 class="form-title">Hablemos</h3>
+            <form [formGroup]="myForm" class="form-box" (ngSubmit)="onSubmit()">
+                <div class="box-field">
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label for="first-name">Nombre</mat-label>
+                        <input matInput placeholder="Nombre" id="first-name" type="text" formControlName="firstName"
+                            required>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                    </mat-form-field>
+                </div>
+
+                <div class="box-field">
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label for="last-name">Apellido</mat-label>
+                        <input matInput placeholder="Apellido" id="last-name" type="text" formControlName="lastName"
+                            required>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="box-field">
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="pat@example.com" type="email" formControlName="email" required>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                        <mat-error *ngIf="myForm.invalid">Escribe corecto</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="box-field">
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label for="message">Mensage</mat-label>
+                        <textarea matInput placeholder="Diganos algo" type="text" formControlName="message"
+                            required></textarea>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                        <mat-error *ngIf="myForm.invalid">Escribe corecto</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="box-field">
+                    <mat-checkbox formControlName="check" required>
+                        Reglas
+                    </mat-checkbox>
+                </div>
+
+                <div class="box-field">
+                    <button type="submit" [disabled]="!myForm.valid" mat-raised-button color="primary">Enviar</button>
+                </div>
+
+            </form>
         </div>
     </div>
 </section>

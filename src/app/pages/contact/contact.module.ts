@@ -6,12 +6,16 @@ import { ContactComponent } from './contact.component';
 
 import { MaterialModule } from '../../../lib/ui/material.module';
 
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+
 
 @NgModule({
   imports: [
     CommonModule,
     ContactRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [ContactComponent]
 })
