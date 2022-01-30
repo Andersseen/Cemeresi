@@ -5,8 +5,6 @@ import { ServicesRoutingModule } from './services-routing.module';
 import { ServicesComponent } from './services.component';
 
 import { MaterialModule } from '../../../lib/ui/material.module';
-import { FisioterapiaComponent } from './pages/fisioterapia/fisioterapia.component';
-import { EsteticaComponent } from './pages/estetica/estetica.component';
 
 
 
@@ -16,7 +14,7 @@ import { EsteticaComponent } from './pages/estetica/estetica.component';
     ServicesRoutingModule,
     MaterialModule
   ],
-  declarations: [ServicesComponent, FisioterapiaComponent, EsteticaComponent]
+  declarations: [ServicesComponent]
 })
 export class ServicesModule { }
 
