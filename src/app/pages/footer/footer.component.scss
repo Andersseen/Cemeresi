@@ -125,3 +125,30 @@ footer{
 
 // ENd ANIMATION LINES
 
+
+// ====MEDIA QUERY===
+
+@media screen and (max-width: 768px) { 
+  .footer-wrapper {
+    align-items: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+
+    grid-template-areas:
+        "footer-box_1"
+        "footer-box_2" ;
+  }
+  .footer-box_1 { 
+    grid-area: footer-box_1;
+    padding: 2%;
+    justify-self: start;
+  }
+  .footer-box_2 { 
+    grid-area: footer-box_2;
+    justify-self: end;
+  }
+}
+
