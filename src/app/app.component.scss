@@ -1,14 +1,10 @@
-main{
-    width: 100%;
-    height: 100%;
-}
 :host {
   .sidenav-container {
     background: #ffffff;
     color: inherit;
     
     .mat-sidenav-content {
-      overflow: hidden;
+      overflow-x: hidden;
     }
   }
 
