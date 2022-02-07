@@ -1,6 +1,6 @@
 section{
     margin-top: 60px;
-    height: 100vh;
+    min-height: 100vh;
     background: #ffffff;
 }
 
@@ -20,5 +20,24 @@ section{
 .content{
     padding: 5%;
     margin: 0 5%;
-    background-color: antiquewhite;
+    background-image: radial-gradient(violet 20%, rgb(132, 29, 153) 100%);
+    color: #ffffff;
+
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) { 
+    .wrapper{
+        flex-direction: column;
+
+        align-items: center;
+        
+        .wrap-text{
+        width: 80%;
+        }
+    }
+    .content{
+        padding: 1%;
+        margin: 0;  
+    }
 }
