@@ -20,6 +20,12 @@
     }
   }
 }
+a.active {
+    border-bottom: 1px solid white;
+}
+a:hover {
+  color: black;
+}
 
 
 .nav-bar{
