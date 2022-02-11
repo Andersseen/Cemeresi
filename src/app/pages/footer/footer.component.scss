@@ -24,11 +24,26 @@ footer{
     grid-template-areas:
         "footer-box_1 footer-box_2 footer-box_3"
         "footer-box_1 footer-box_2 footer-box_3"
-        "footer-box_1 footer-box_2 footer-box_3";
+        "footer-box_1 footer-box_2 footer-box_3"
+        "footer-box_4 footer-box_4 footer-box_4";
 }
 .footer-box_1 { grid-area: footer-box_1; }
 .footer-box_2 { grid-area: footer-box_2; }
 .footer-box_3 { grid-area: footer-box_3; }
+.footer-box_4 { grid-area: footer-box_4; }
+.footer-box_4 > p > a.icon-back{
+  display: flex;
+  align-items: center;
+  
+  padding: .5rem 1rem;
+  
+}
+a{
+  color: #000;
+}
+a:hover{
+  color: #8E24AA;
+}
 
 // START ANIMATION LINES
 .light {
@@ -139,16 +154,26 @@ footer{
 
     grid-template-areas:
         "footer-box_1"
-        "footer-box_2" ;
+        "footer-box_3"
+        "footer-box_4"  ;
   }
   .footer-box_1 { 
     grid-area: footer-box_1;
     padding: 2%;
-    justify-self: start;
+    justify-self: center;
   }
+
   .footer-box_2 { 
-    grid-area: footer-box_2;
-    justify-self: end;
+    display: none;
+  }
+  .footer-box_3 { 
+    grid-area: footer-box_3;
+    justify-self: center;
+  }
+  
+  .footer-box_4 { 
+    grid-area: footer-box_4;
+    justify-self: center;
   }
 }
 
