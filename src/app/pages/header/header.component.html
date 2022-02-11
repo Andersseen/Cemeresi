@@ -1,11 +1,20 @@
-<header class="gradient" [class.scrolling]="isScroling">
-    <div class="logo-wrapper">
-        <img src="../../../assets/media/logo.png" alt="logo">
-    </div>
-    <nav class="nav-wrapper">
-        <a routerLink="/home">Home</a>
-        <a routerLink="/about">about</a>
-        <a routerLink="/contact">contact</a>
-    </nav>
+<header>
+    <mat-toolbar color="primary" class="toolbar nav-bar d-flex justify-content-around py-3">
+
+        <div class="header-logo d-flex just">
+            <img src="../../../assets/media/logo.png" width="50" alt="logo">
+            <h1>Cemeresi</h1>
+        </div>
+        <button class="hidden-btn" mat-icon-button (click)="button.toggle() && onClickButton()">
+            <mat-icon [hidden]="isOpen">menu</mat-icon>
+            <mat-icon [hidden]="!isOpen">close</mat-icon>
+        </button>
+        <nav class="top-navigtaion">
+            <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+            <a mat-button routerLink="/services" routerLinkActive="active">Tratamientos</a>
+            <a mat-button routerLink="/about" routerLinkActive="active">Nosotros</a>
+            <a mat-button routerLink="/contact" routerLinkActive="active">Contacto</a>
+        </nav>
+    </mat-toolbar>
 
 </header>
