@@ -53,6 +53,14 @@ a:hover {
 }
 
 mat-sidenav {
-  margin-top: 60px;
-  width: 30vw;
+  margin-top: 50px;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 5rem;
+  
+}
+
+mat-nav-list > *{
+  padding: 3rem 0;
 }

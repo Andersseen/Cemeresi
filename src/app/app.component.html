@@ -27,12 +27,12 @@
     <app-header [button]="snav"></app-header>
     <mat-sidenav-container class="sidenav-container">
 
-        <mat-sidenav #snav mode="over">
-            <mat-nav-list>
-                <a mat-list-item routerLink="/home" routerLinkActive="active">Inicio</a>
-                <a mat-list-item routerLink="/services" routerLinkActive="active">Tratamientos</a>
-                <a mat-list-item routerLink="/about" routerLinkActive="active">Nosotros</a>
-                <a mat-list-item routerLink="/contact" routerLinkActive="active">Contacto</a>
+        <mat-sidenav #snav mode="over" class="sidebar">
+            <mat-nav-list class="sidebar-list">
+                <a class="fs-1" mat-list-item routerLink="/home" routerLinkActive="active">Inicio</a>
+                <a class="fs-1" mat-list-item routerLink="/services" routerLinkActive="active">Tratamientos</a>
+                <a class="fs-1" mat-list-item routerLink="/about" routerLinkActive="active">Nosotros</a>
+                <a class="fs-1" mat-list-item routerLink="/contact" routerLinkActive="active">Contacto</a>
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
