@@ -29,10 +29,14 @@
 
         <mat-sidenav #snav mode="over" class="sidebar">
             <mat-nav-list class="sidebar-list">
-                <a class="fs-1" mat-list-item routerLink="/home" routerLinkActive="active">Inicio</a>
-                <a class="fs-1" mat-list-item routerLink="/services" routerLinkActive="active">Tratamientos</a>
-                <a class="fs-1" mat-list-item routerLink="/about" routerLinkActive="active">Nosotros</a>
-                <a class="fs-1" mat-list-item routerLink="/contact" routerLinkActive="active">Contacto</a>
+                <a (click)="snav.toggle() && onClickBtn()" class=" fs-1" mat-list-item routerLink="/home"
+                    routerLinkActive="active">Inicio</a>
+                <a (click)="snav.toggle() && onClickBtn()" class="fs-1" mat-list-item routerLink="/services"
+                    routerLinkActive="active">Tratamientos</a>
+                <a (click)="snav.toggle() && onClickBtn()" class="fs-1" mat-list-item routerLink="/about"
+                    routerLinkActive="active">Nosotros</a>
+                <a (click)="snav.toggle() && onClickBtn()" class="fs-1" mat-list-item routerLink="/contact"
+                    routerLinkActive="active">Contacto</a>
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>

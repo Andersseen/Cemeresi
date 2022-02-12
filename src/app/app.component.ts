@@ -1,3 +1,4 @@
+import { ButtonService } from './services/button.service';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -8,7 +9,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+
+  constructor(public buttonService: ButtonService) { }
+
   prepareRoute(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.['animation'];
+  }
+
+  onClickBtn() {
+    this.buttonService.isOpen = !this.buttonService.isOpen;
   }
 }

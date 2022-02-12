@@ -1,3 +1,4 @@
+import { ButtonService } from './../../services/button.service';
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,7 @@ import { Component, HostListener, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  isOpen: boolean = false;
-
-  constructor() { }
+  constructor(public buttonService: ButtonService) { }
 
   ngOnInit(): void {
 
@@ -18,6 +17,6 @@ export class HeaderComponent implements OnInit {
   @Input() button: any;
 
   onClickButton() {
-    this.isOpen = !this.isOpen;
+    this.buttonService.isOpen = !this.buttonService.isOpen;
   }
 }
