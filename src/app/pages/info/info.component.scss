@@ -6,5 +6,15 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
+    background-image: url('../../../assets/media/aaa.jpg');
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 2px 2px 6px 10px rgb(0 0 0 /.5);
+
+     -webkit-filter: contrast(70%) brightness(0.9) sepia(10%);
+
+             filter: contrast(70%) brightness(0.9) sepia(10%);
+
 }
