@@ -8,6 +8,8 @@ import { MaterialModule } from '../../../lib/ui/material.module';
 import { IntegralComponent } from './pages/integral/integral.component';
 import { FacialComponent } from './pages/integral/facial/facial.component';
 import { CorporalComponent } from './pages/integral/corporal/corporal.component';
+import { DieteticaComponent } from './pages/dietetica/dietetica.component';
+import { FisioterapiaComponent } from './pages/fisioterapia/fisioterapia.component';
 
 
 
@@ -17,7 +19,7 @@ import { CorporalComponent } from './pages/integral/corporal/corporal.component'
     ServicesRoutingModule,
     MaterialModule
   ],
-  declarations: [ServicesComponent, IntegralComponent, FacialComponent, CorporalComponent]
+  declarations: [ServicesComponent, IntegralComponent, FacialComponent, CorporalComponent, DieteticaComponent, FisioterapiaComponent]
 })
 export class ServicesModule { }
 
