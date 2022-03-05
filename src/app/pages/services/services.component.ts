@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
 import {
   bounceInLeftOnEnterAnimation, bounceInDownOnEnterAnimation
 } from 'angular-animations';
-import { slideInAnimation } from '../../../lib/ui/route-animation'
 
 @Component({
   selector: 'app-services',
@@ -13,7 +10,6 @@ import { slideInAnimation } from '../../../lib/ui/route-animation'
   animations: [
     bounceInLeftOnEnterAnimation({ anchor: 'left' }),
     bounceInDownOnEnterAnimation({ anchor: 'down', delay: 100 }),
-    slideInAnimation
   ]
 })
 export class ServicesComponent implements OnInit {
