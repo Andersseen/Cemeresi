@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  bounceInLeftOnEnterAnimation, bounceInDownOnEnterAnimation
+  fadeInOnEnterAnimation
 } from 'angular-animations';
 
 @Component({
@@ -8,8 +8,7 @@ import {
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
   animations: [
-    bounceInLeftOnEnterAnimation({ anchor: 'left' }),
-    bounceInDownOnEnterAnimation({ anchor: 'down', delay: 100 }),
+    fadeInOnEnterAnimation({ anchor: 'fade' }),
   ]
 })
 export class ServicesComponent implements OnInit {
