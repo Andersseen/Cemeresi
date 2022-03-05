@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-dietetica',
   templateUrl: './dietetica.component.html',
-  styleUrls: ['./dietetica.component.scss']
+  styleUrls: ['../../services.component.scss']
 })
 export class DieteticaComponent implements OnInit {
 
