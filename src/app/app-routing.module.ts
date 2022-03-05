@@ -25,12 +25,12 @@ const routes: Routes = [
   },
   {
     path: '**',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule), data: { animation: 'HomePage' }
+    redirectTo: 'home'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
