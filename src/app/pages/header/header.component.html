@@ -21,7 +21,64 @@
             <a mat-button routerLink="/about" routerLinkActive="active">Nosotros</a>
             <a mat-button routerLink="/contact" routerLinkActive="active">Contacto</a>
         </nav>
-        <button class="header-btn" mat-stroked-button>Contacta</button>
+        <button class="header-btn" mat-stroked-button (click)="open(content)">Contacta</button>
     </mat-toolbar>
+
+    <ng-template #content let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title form-title" id="modal-basic-title">Contacta con nosotros:</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="myForm" class="form-box" (ngSubmit)="onSubmit()">
+                <div class="box-field">
+                    <mat-form-field class="form-field input-group" appearance="outline">
+                        <mat-label for="first-name">Nombre</mat-label>
+                        <input matInput placeholder="Nombre" id="first-name" type="text" formControlName="firstName"
+                            required>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                    </mat-form-field>
+                </div>
+
+                <div class="box-field">
+                    <mat-form-field class="form-field input-group" appearance="outline">
+                        <mat-label for="last-name">Apellido</mat-label>
+                        <input matInput placeholder="Apellido" id="last-name" type="text" formControlName="lastName"
+                            required>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="box-field">
+                    <mat-form-field class="form-field input-group" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="pat@example.com" type="email" formControlName="email" required>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                        <mat-error *ngIf="myForm.invalid">Escribe corecto</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="box-field">
+                    <mat-form-field class="form-field input-group" appearance="outline">
+                        <mat-label for="message">Mensage</mat-label>
+                        <textarea matInput placeholder="Diganos algo" type="text" formControlName="message"
+                            required></textarea>
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                        <mat-hint>Es obligatorio*</mat-hint>
+                        <mat-error *ngIf="myForm.invalid">Escribe corecto</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="box-field input-group">
+                    <mat-checkbox formControlName="check" required>
+                        Reglas
+                    </mat-checkbox>
+                </div>
+
+                <div class="box-field input-group">
+                    <button type="submit" [disabled]="!myForm.valid" mat-raised-button color="primary">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+    </ng-template>
 
 </header>

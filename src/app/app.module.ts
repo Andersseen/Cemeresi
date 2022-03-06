@@ -12,6 +12,7 @@ import { TransparentComponent } from './pages/transparent/transparent.component'
 import { InfoComponent } from './pages/info/info.component';
 
 import { MaterialModule } from '../lib/ui/material.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MaterialModule } from '../lib/ui/material.module';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
