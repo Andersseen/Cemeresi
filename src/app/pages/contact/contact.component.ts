@@ -6,7 +6,8 @@ import { Validators, FormControl } from '@angular/forms';
 import {
   bounceInRightOnEnterAnimation,
   bounceInLeftOnEnterAnimation,
-  bounceInUpOnEnterAnimation
+  bounceInUpOnEnterAnimation,
+  bounceInDownOnEnterAnimation
 } from 'angular-animations';
 
 @Component({
@@ -16,7 +17,9 @@ import {
   animations: [
     bounceInRightOnEnterAnimation({ anchor: 'enter1' }),
     bounceInLeftOnEnterAnimation({ anchor: 'enter2', delay: 100 }),
-    bounceInUpOnEnterAnimation({ anchor: 'enter3', delay: 300 }),
+    bounceInDownOnEnterAnimation({ anchor: 'enter3', delay: 300 }),
+    bounceInUpOnEnterAnimation({ anchor: 'enter4', delay: 400 }),
+    bounceInUpOnEnterAnimation({ anchor: 'enter5', delay: 500 }),
   ]
 })
 export class ContactComponent {
