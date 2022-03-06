@@ -10,7 +10,10 @@ header{
     box-shadow:  2px 2px 10px 2px rgba(0 0 0 / .5);
 
 }
-
+.header-title{
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
+}
 .header-logo > *{
     margin: auto 1rem;
 }
@@ -43,6 +46,12 @@ nav a:hover{
         display: block;
     }
     .top-navigtaion{
+        display: none;
+    }
+    .header-title{
+        font-size: 1rem;
+    }
+    .header-btn{
         display: none;
     }
 }
