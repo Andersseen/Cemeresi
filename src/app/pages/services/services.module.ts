@@ -12,6 +12,7 @@ import { DieteticaComponent } from './pages/dietetica/dietetica.component';
 import { FisioterapiaComponent } from './pages/fisioterapia/fisioterapia.component';
 import { CirurgiaComponent } from './pages/cirurgia/cirurgia.component';
 import { PsicologiaComponent } from './pages/psicologia/psicologia.component';
+import { AntiagingComponent } from './pages/antiaging/antiaging.component';
 
 
 
@@ -21,7 +22,7 @@ import { PsicologiaComponent } from './pages/psicologia/psicologia.component';
     ServicesRoutingModule,
     MaterialModule
   ],
-  declarations: [ServicesComponent, IntegralComponent, FacialComponent, CorporalComponent, DieteticaComponent, FisioterapiaComponent, CirurgiaComponent, PsicologiaComponent]
+  declarations: [ServicesComponent, IntegralComponent, FacialComponent, CorporalComponent, DieteticaComponent, FisioterapiaComponent, CirurgiaComponent, PsicologiaComponent, AntiagingComponent]
 })
 export class ServicesModule { }
 
