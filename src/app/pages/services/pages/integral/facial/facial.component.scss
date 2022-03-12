@@ -1,5 +1,27 @@
+
 .bg-img{
-    background-image: url('../../../../../../assets/media/bg-facial.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('../../../../../../assets/media/bg-facial.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.section-1__bg-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../../../../../assets/media/face/lipm.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.section-2__bg-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../../../../../assets/media/face/face.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.section-3__bg-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../../../../../assets/media/face/radio.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.section-4__bg-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../../../../../../assets/media/face/h2o.jpg');
     background-position: center;
     background-size: cover;
 }

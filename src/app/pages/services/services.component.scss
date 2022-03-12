@@ -93,3 +93,19 @@ section{
     flex: 1;
   }
 }
+
+// FOR SERVICES
+.header-section{
+    min-height: 50vh;
+}
+.section-block{
+    min-height: 300px;
+}
+.block-wrap {
+    position: absolute;
+    z-index: 2;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+}
