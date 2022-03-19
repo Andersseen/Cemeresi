@@ -1,24 +1,22 @@
 <section class="wrap-container">
     <mat-selection-list [@slide] *ngIf="isList" #shoes [multiple]="false">
-        <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe" (click)="doSlide()">
-            {{shoe}}
+        <mat-list-option *ngFor="let treatment of treatments" (click)="onSelect(treatment)">
+            {{treatment.name}}
         </mat-list-option>
     </mat-selection-list>
-    <div class="wrap-card" [@slide] *ngIf="!isList">
+    <div class="wrap-card" [@slide] *ngIf="!isList && treatment !== null">
         <div class="card-img">
-            <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo">
+            <img src="{{treatment.image}}" alt="Photo">
         </div>
 
         <div class="card-content">
             <div>
-                <h2>Shiba Inu</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt officiis eos nemo, nobis animi
-                    amet fuga expedita minus reprehenderit dolores quaerat quia molestiae ipsum voluptates, doloremque,
-                    ducimus culpa repellat?</p>
+                <h2>{{treatment.name}}</h2>
+                <p>{{treatment.description}}</p>
             </div>
             <div>
                 <button mat-button>Seleccionar</button>
-                <button mat-button (click)="doSlide()">Atras</button>
+                <button mat-button (click)="isList = true">Atras</button>
             </div>
         </div>
 

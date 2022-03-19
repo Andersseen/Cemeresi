@@ -1,29 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  slideInRightOnEnterAnimation
-} from 'angular-animations';
+import { FACE } from '../../../../../../lib/global/face-mock';
+import { Treatment } from '../../../../../../lib/global/treatment-interface';
+import { slideInRightOnEnterAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-facial',
   templateUrl: './facial.component.html',
   styleUrls: ['../../../services.component.scss', 'facial.component.scss'],
-  animations: [
-    slideInRightOnEnterAnimation({ anchor: 'slide' }),
-  ]
+  animations: [slideInRightOnEnterAnimation({ anchor: 'slide' })],
 })
 export class FacialComponent implements OnInit {
+  treatments = FACE;
+  treatment!: Treatment;
+  isList = true;
 
-  typesOfShoes: string[] = ['LIMPIEZA FACIAL CON MICRODERMOABRASIÓN CON PUNTA DE DIAMANTE', 'TRATAMIENTOS PERSONALIZADOS', 'RADIOFRECUENCIA', 'OXIGENOTERAPIA H2O'];
+  constructor() {}
 
-  isList = true
+  ngOnInit(): void {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onSelect(tr: Treatment): void {
+    this.treatment = tr;
+    this.isList = false;
   }
-
-  doSlide() {
-    this.isList = !this.isList
-  }
-
 }
