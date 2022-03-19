@@ -1,10 +1,10 @@
 <section class="wrap-container">
-    <mat-selection-list [@slide] *ngIf="isList" #shoes [multiple]="false">
+    <mat-selection-list [@up] *ngIf="isList" #shoes [multiple]="false">
         <mat-list-option *ngFor="let treatment of treatments" (click)="onSelect(treatment)">
             {{treatment.name}}
         </mat-list-option>
     </mat-selection-list>
-    <div class="wrap-card" [@slide] *ngIf="!isList && treatment !== null">
+    <div class="wrap-card" [@right] *ngIf="!isList && treatment !== null">
         <div class="card-img">
             <img src="{{treatment.image}}" alt="Photo">
         </div>

@@ -1,21 +1,20 @@
-section{
-    margin-top: 60px;
-    min-height: 100vh;
-    background: #ffffff;
+section {
+  margin-top: 60px;
+  min-height: 100vh;
+  background: #ffffff;
 }
 
 .example-card {
   max-width: 400px;
 }
-.content-flex{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.content-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-    gap: 2rem;
-    padding: 2%;
+  gap: 2rem;
+  padding: 2%;
 }
-
 
 // mat-card{
 //     color: white;
@@ -23,23 +22,23 @@ section{
 //   background-size: cover;
 // }
 
-.bg-img{
-  background-image: url('../../../assets/media/bg-1.jpg');
-    background-position: center;
-    background-size: cover;
+.bg-img {
+  background-image: url("../../../assets/media/bg-1.jpg");
+  background-position: center;
+  background-size: cover;
 }
 /*
  * Custom translucent site header
  */
 
 .site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
   color: #8e8e8e;
-  transition: color .15s ease-in-out;
+  transition: color 0.15s ease-in-out;
 }
 .site-header a:hover {
   color: #fff;
@@ -68,7 +67,7 @@ section{
   bottom: 10%;
   left: 10px;
   content: "";
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
 
@@ -79,7 +78,6 @@ section{
   left: 5%;
   background-color: #e5e5e5;
 }
-
 
 /*
  * Extra utilities
@@ -95,17 +93,50 @@ section{
 }
 
 // FOR SERVICES
-.header-section{
-    min-height: 50vh;
+.header-section {
+  min-height: 50vh;
 }
-.section-block{
-    min-height: 300px;
+.section-block {
+  min-height: 300px;
 }
 .block-wrap {
-    position: absolute;
-    z-index: 2;
+  position: absolute;
+  z-index: 2;
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+// css list group
+.wrap-container {
+  margin: 0;
+  width: 100%;
+  min-height: 70vh;
+}
+.wrap-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+.card-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 2rem;
+  img {
+    border-radius: 10px;
+    width: 30rem;
+    height: 20rem;
+  }
 }

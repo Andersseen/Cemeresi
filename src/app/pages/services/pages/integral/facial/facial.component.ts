@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FACE } from '../../../../../../lib/global/face-mock';
 import { Treatment } from '../../../../../../lib/global/treatment-interface';
-import { slideInRightOnEnterAnimation } from 'angular-animations';
+import {
+  slideInUpOnEnterAnimation,
+  slideInRightOnEnterAnimation,
+} from 'angular-animations';
 
 @Component({
   selector: 'app-facial',
   templateUrl: './facial.component.html',
   styleUrls: ['../../../services.component.scss', 'facial.component.scss'],
-  animations: [slideInRightOnEnterAnimation({ anchor: 'slide' })],
+  animations: [
+    slideInUpOnEnterAnimation({ anchor: 'up' }),
+    slideInRightOnEnterAnimation({ anchor: 'right' }),
+  ],
 })
 export class FacialComponent implements OnInit {
   treatments = FACE;
