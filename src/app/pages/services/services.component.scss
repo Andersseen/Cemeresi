@@ -46,7 +46,7 @@ section {
 }
 
 /*
- * Dummy devices (replace them with your own or something else entirely!)
+ *
  */
 
 .product-device {
@@ -86,11 +86,6 @@ section {
 .flex-equal > * {
   flex: 1;
 }
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    flex: 1;
-  }
-}
 
 // FOR SERVICES
 .header-section {
@@ -113,6 +108,7 @@ section {
   margin: 0;
   width: 100%;
   min-height: 70vh;
+  overflow-x: hidden;
 }
 .wrap-card {
   display: flex;
@@ -138,5 +134,22 @@ section {
     border-radius: 10px;
     width: 30rem;
     height: 20rem;
+  }
+}
+
+// MEDIA QUERY
+
+// MOBILE FIRST
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+// DESCTOP FIRST
+@media (max-width: 961px) {
+  .wrap-card {
+    display: flex;
+    flex-direction: column;
   }
 }

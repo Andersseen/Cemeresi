@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-corporal',
   templateUrl: './corporal.component.html',
-  styleUrls: ['../../../services.component.scss', './corporal.component.scss'],
+  styleUrls: ['../../../services.component.scss'],
   animations: [
     slideInUpOnEnterAnimation({ anchor: 'up' }),
     slideInRightOnEnterAnimation({ anchor: 'right' }),

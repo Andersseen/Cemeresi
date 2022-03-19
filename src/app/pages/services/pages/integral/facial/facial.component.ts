@@ -9,7 +9,7 @@ import {
 @Component({
   selector: 'app-facial',
   templateUrl: './facial.component.html',
-  styleUrls: ['../../../services.component.scss', 'facial.component.scss'],
+  styleUrls: ['../../../services.component.scss'],
   animations: [
     slideInUpOnEnterAnimation({ anchor: 'up' }),
     slideInRightOnEnterAnimation({ anchor: 'right' }),
